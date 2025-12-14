@@ -1,6 +1,6 @@
 # CoNeCo-2026
 http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=171752
-
+The Paper Draft - https://www.authorea.com/users/631977/articles/1367167-cpux-cognitive-execution-paths-without-hidden-logic-logic-through-perception
 
 Proccedings to be published :
 

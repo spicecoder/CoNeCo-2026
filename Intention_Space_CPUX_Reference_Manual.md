@@ -127,7 +127,7 @@ I1(s1) -> [DN1, I3(s3), O1, I4(s4), DN2, I5(s5), O2, I6(s6)]
 - Each Signal has unique hash (Signal Hash / IS#)
 - Design-time Signal must match runtime Signal structure
 - Runtime responses may differ from design-time responses
-
+- ** an intention can pickup - the same signal at various hops. 
 **Signal Hash Registry (SHR)**:
 - Maps Intention phrases to hash values
 - Example: `'I_login': 0x0001`, `'I_auth': 0x0002`
@@ -314,7 +314,7 @@ Cell = {
 1. DN emits Intention with Signal
 2. Object reflects to Grid Cells (1 cell per pulse)
 3. Cell editability determined by Pulse TV:
-   - TV='Y': Editable (multi-row for array responses)
+   - TV='Y': Editable (multi-row for array responses)  <--- should be the other way
    - TV='N': Display-only
    - TV='UN': Action button
 4. Action configured to emit Intention+Signal to Object
@@ -722,7 +722,7 @@ function checkAndTriggerNewCPUX(objectField, gatekeeper) {
 - Uses Object-CPUX as source in synctest
 - Can trigger multiple CPUX if multiple matches
 - Async execution by configuration
-- Object remains in current CPUX while new CPUX runs
+- Object remains in current CPUX while new CPUX runs <-- This shows a CPUX 'transaction' can be started at an Object  state ;  
 
 **Implementation Method**: `triggerCPUXFromObject()`, `checkTriggerConditions()`
 
